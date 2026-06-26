@@ -1039,39 +1039,49 @@ html.dark .hero-description{
 
 .achievements-header{
 
-  width:min(1280px,95vw);
+  width:min(1200px,90vw);
 
-  margin:auto;
-
-  margin-bottom:80px;
+  margin:0 auto 80px;
 
 }
 
 .achievements-grid{
 
-  width:min(1280px,95vw);
+  width:min(1200px,90vw);
 
   margin:auto;
 
   display:grid;
 
   grid-template-columns:
-  1fr
-  1fr;
+  repeat(2,minmax(0,1fr));
 
-  gap:30px;
+  gap:32px;
 
 }
 
 .achievement-card{
 
-  overflow:hidden;
-
-  border-radius:32px;
-
   background:var(--card);
 
   border:1px solid rgba(168,85,247,.15);
+
+  border-radius:32px;
+
+  overflow:hidden;
+
+  transition:.35s;
+
+  backdrop-filter:blur(20px);
+
+}
+
+.achievement-card:hover{
+
+  transform:translateY(-8px);
+
+  box-shadow:
+  0 25px 60px rgba(168,85,247,.12);
 
 }
 
@@ -1079,15 +1089,50 @@ html.dark .hero-description{
 
   width:100%;
 
-  height:320px;
+  aspect-ratio:16/10;
 
-  object-fit:cover;
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:20px;
+
+  background:linear-gradient(
+      135deg,
+      rgba(255,255,255,.04),
+      rgba(255,255,255,.01)
+  );
+
+}
+
+.achievement-image img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:contain;
+
+  padding:18px;
+
+  transition:.4s;
+
+}
+
+.achievement-card:hover
+.achievement-image img{
+
+  transform:scale(1.03);
 
 }
 
 .achievement-content{
 
-  padding:30px;
+  padding:28px;
+
+  background:transparent;
 
 }
 
@@ -1097,11 +1142,15 @@ html.dark .hero-description{
 
   font-size:2rem;
 
+  margin-bottom:10px;
+
 }
 
 .achievement-content p{
 
-  margin-top:10px;
+  line-height:1.8;
+
+  opacity:.8;
 
 }
 
@@ -1109,23 +1158,27 @@ html.dark .hero-description{
 
   display:block;
 
-  margin-top:10px;
+  margin-top:18px;
 
   color:var(--accent);
+
+  font-weight:600;
+
+  letter-spacing:1px;
 
 }
 
 .achievement-list-card{
 
-  width:min(1280px,95vw);
+  width:min(1200px,90vw);
 
-  margin:50px auto 0;
+  margin:70px auto 0;
 
   display:flex;
 
   flex-wrap:wrap;
 
-  gap:15px;
+  gap:18px;
 
 }
 
@@ -1141,13 +1194,23 @@ html.dark .hero-description{
   border:
   1px solid rgba(168,85,247,.15);
 
+  transition:.3s;
+
+}
+
+.achievement-pill:hover{
+
+  background:rgba(168,85,247,.14);
+
+  transform:translateY(-3px);
+
 }
 
 .community-section{
 
-  width:min(1280px,95vw);
+  width:min(1200px,90vw);
 
-  margin:120px auto 0;
+  margin:140px auto 0;
 
   display:grid;
 
@@ -1155,9 +1218,20 @@ html.dark .hero-description{
   1.2fr
   .8fr;
 
-  gap:60px;
+  gap:70px;
 
   align-items:center;
+
+}
+
+.community-video{
+
+  border-radius:32px;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 25px 60px rgba(0,0,0,.12);
 
 }
 
@@ -1165,13 +1239,13 @@ html.dark .hero-description{
 
   width:100%;
 
-  border-radius:32px;
+  display:block;
 
 }
 
 .community-content h3{
 
-  margin:20px 0;
+  margin:18px 0 22px;
 
   font-family:'Cormorant Garamond',serif;
 
@@ -1182,6 +1256,8 @@ html.dark .hero-description{
 .community-content p{
 
   line-height:2;
+
+  opacity:.85;
 
 }
 
@@ -1196,6 +1272,16 @@ html.dark .hero-description{
   .community-section{
 
     grid-template-columns:1fr;
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  .achievements-section{
+
+    padding:80px 0;
 
   }
 
@@ -1370,5 +1456,147 @@ html.dark .hero-description{
   opacity:.6;
 
   font-size:.9rem;
+
+}
+
+/*=========================================
+COMMUNITY SCROLLER
+=========================================*/
+
+.community-strip{
+
+margin-top:90px;
+
+overflow:hidden;
+
+position:relative;
+
+width:100%;
+
+}
+
+.community-strip::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+width:140px;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+var(--bg),
+transparent
+);
+
+z-index:5;
+
+}
+
+.community-strip::after{
+
+content:"";
+
+position:absolute;
+
+right:0;
+
+top:0;
+
+width:140px;
+
+height:100%;
+
+background:linear-gradient(
+270deg,
+var(--bg),
+transparent
+);
+
+z-index:5;
+
+}
+
+.community-track{
+
+  display:flex;
+
+  gap:24px;
+
+  width:max-content;
+
+  animation:communityMarquee 35s linear infinite;
+
+}
+
+.community-track:hover{
+
+animation-play-state:paused;
+
+}
+
+.community-card{
+
+width:290px;
+
+height:185px;
+
+overflow:hidden;
+
+border-radius:24px;
+
+flex-shrink:0;
+
+background:var(--card);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(168,85,247,.12);
+
+transition:.35s;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.community-track:hover{
+
+  animation-play-state:paused;
+
+}
+
+.community-card img,
+.community-card video{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+@keyframes communityMarquee{
+
+  from{
+
+    transform:translateX(0);
+
+  }
+
+  to{
+
+    transform:translateX(calc(-50% - 12px));
+
+  }
 
 }

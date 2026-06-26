@@ -1,6 +1,8 @@
 import acmCertificate from "../assets/achievements/acm-summer-school-iit-madras.jpg";
 import ieeeCertificate from "../assets/achievements/ieee-eureka-2024.jpg";
 
+import CommunityScroller from "./CommunityScroller";
+
 export default function Achievements() {
   return (
     <section id="achievements" className="achievements-section">
@@ -17,7 +19,7 @@ export default function Achievements() {
 
       </div>
 
-      {/* ACHIEVEMENTS */}
+      {/* ================= ACHIEVEMENTS ================= */}
 
       <div className="achievements-grid">
 
@@ -25,7 +27,7 @@ export default function Achievements() {
 
           <img
             src={acmCertificate}
-            alt="ACM Summer School"
+            alt="ACM India Summer School"
             className="achievement-image"
           />
 
@@ -36,8 +38,7 @@ export default function Achievements() {
             </h3>
 
             <p>
-              Selected Participant —
-              Responsible & Safe AI
+              Selected Participant — Responsible & Safe AI
             </p>
 
             <span>
@@ -52,7 +53,7 @@ export default function Achievements() {
 
           <img
             src={ieeeCertificate}
-            alt="IEEE Eureka"
+            alt="IEEE Eu-Reka 2024"
             className="achievement-image"
           />
 
@@ -76,12 +77,12 @@ export default function Achievements() {
 
       </div>
 
-      {/* ACHIEVEMENTS LIST */}
+      {/* ================= ACHIEVEMENT PILLS ================= */}
 
       <div className="achievement-list-card">
 
         <div className="achievement-pill">
-          NEP Saarthi — National Education Policy Initiative
+          NEP SAARTHI — UGC & AICTE Initiative
         </div>
 
         <div className="achievement-pill">
@@ -106,7 +107,7 @@ export default function Achievements() {
 
       </div>
 
-      {/* COMMUNITY IMPACT */}
+      {/* ================= COMMUNITY IMPACT ================= */}
 
       <div className="community-section">
 
@@ -117,7 +118,7 @@ export default function Achievements() {
             muted
             loop
             playsInline
-            controls
+            preload="metadata"
           >
             <source
               src="/videos/ghar-ngo-volunteering.mp4"
@@ -138,14 +139,19 @@ export default function Achievements() {
           </h3>
 
           <p>
-            Volunteered by teaching spoken English
-            and supporting communication skill
-            development among underprivileged girls.
+            Volunteered by teaching spoken English and supporting
+            communication skill development among underprivileged
+            girls through engaging learning sessions, mentorship,
+            and confidence-building activities.
           </p>
 
         </div>
 
       </div>
+
+      {/* ================= MEDIA SCROLLER ================= */}
+
+      <CommunityScroller />
 
     </section>
   );

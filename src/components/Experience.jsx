@@ -111,22 +111,22 @@ export default function Experience() {
           <div className="leadership-list">
 
             <div>
-              <h4>President — ACM Student Chapter</h4>
+              <h4>President — GHRCEM ACM Student Chapter</h4>
               <p>Led technical events, workshops and student initiatives.</p>
             </div>
 
             <div>
-              <h4>Student Co-Ordinator — Peer Counsellors Club</h4>
+              <h4>Student Co-Ordinator — GHCREM Peer Counsellors Club</h4>
               <p>Mentored students and coordinated counselling activities.</p>
             </div>
 
             <div>
-              <h4>NEP Saarthi</h4>
+              <h4>NEP Saarthi Student Ambassador at College — UGC & AICTE Initiative</h4>
               <p>Promoted awareness and implementation of NEP initiatives.</p>
             </div>
 
             <div>
-              <h4>Advisor — E-Cell</h4>
+              <h4>Club Advisor at GHRCEM — E-Cell(IIT Bombay Initiative)</h4>
               <p>Supported entrepreneurship and innovation programs.</p>
             </div>
 
