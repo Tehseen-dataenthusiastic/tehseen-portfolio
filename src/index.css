@@ -1600,3 +1600,54 @@ display:block;
   }
 
 }
+
+
+.findme-btn{
+
+  padding:10px 22px;
+
+  border-radius:999px;
+
+  background:linear-gradient(
+  135deg,
+  #A855F7,
+  #C084FC
+  );
+
+  color:#fff !important;
+
+  font-weight:600;
+
+  text-decoration:none;
+
+  transition:
+  transform .35s,
+  box-shadow .35s,
+  background .35s;
+
+  box-shadow:
+  0 10px 30px rgba(168,85,247,.28);
+
+}
+
+.findme-btn:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:
+  0 16px 40px rgba(168,85,247,.42);
+
+}
+
+.findme-btn:active{
+
+  transform:scale(.98);
+
+}
+
+html.dark .findme-btn{
+
+  box-shadow:
+  0 12px 35px rgba(168,85,247,.35);
+
+}

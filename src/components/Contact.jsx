@@ -29,7 +29,7 @@ export default function Contact() {
             <a
               href="mailto:tehseen.ismailshaikh@gmail.com"
             >
-               Email
+               Email - tehseen.ismailshaikh@gmail.com
             </a>
 
             <a

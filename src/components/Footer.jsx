@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="footer-line"></div>
 
         <span>
-          Built with curiosity, creativity and Momo.
+          Built with Curiosity, Creativity and Momo.
         </span>
 
       </div>

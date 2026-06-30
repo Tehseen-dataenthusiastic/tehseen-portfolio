@@ -39,8 +39,8 @@ export default function Navbar() {
             Achievements
           </a>
 
-          <a href="#contact">
-            Contact
+          <a href="#contact" className="findme-btn">
+            Find Me
           </a>
 
         </nav>
